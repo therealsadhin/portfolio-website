@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import FloatingImage from "../components/FloatingImage";
-import { ArrowRight, Wave } from "lucide-react";
+import { ArrowRight, Waves } from "lucide-react";
 
 const Index = () => {
   return (
@@ -13,7 +13,7 @@ const Index = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold text-white flex items-center gap-2">
-                Hi, I'm Mika <Wave className="w-8 h-8 animate-bounce" />
+                Hi, I'm Mika <Waves className="w-8 h-8 animate-bounce" />
               </h1>
               <div className="flex items-center gap-2 text-2xl md:text-4xl text-white/90">
                 Designer <ArrowRight className="w-6 h-6" /> Developer
