@@ -25,7 +25,9 @@ const Navbar = () => {
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="relative w-8 h-8 flex items-center justify-center"
+            className={`relative w-8 h-8 flex items-center justify-center ${
+              isMenuOpen ? 'z-50' : ''
+            }`}
             aria-label="Toggle menu"
           >
             <div
@@ -47,10 +49,28 @@ const Navbar = () => {
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="h-full flex flex-col items-center justify-center gap-8 text-white text-3xl">
-          <a href="#about" className="hover:text-primary transition-colors">About</a>
-          <a href="#hire" className="hover:text-primary transition-colors">Hire me</a>
-          <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
+        <div className="h-full flex flex-col items-center justify-center gap-8">
+          <a 
+            href="#about" 
+            className="text-3xl text-white relative group"
+          >
+            <span className="relative z-10">About</span>
+            <span className="absolute inset-0 bg-primary scale-0 rounded-full group-hover:scale-100 transition-transform duration-300 -z-0"></span>
+          </a>
+          <a 
+            href="#hire" 
+            className="text-3xl text-white relative group"
+          >
+            <span className="relative z-10">Hire me</span>
+            <span className="absolute inset-0 bg-primary scale-0 rounded-full group-hover:scale-100 transition-transform duration-300 -z-0"></span>
+          </a>
+          <a 
+            href="#projects" 
+            className="text-3xl text-white relative group"
+          >
+            <span className="relative z-10">Projects</span>
+            <span className="absolute inset-0 bg-primary scale-0 rounded-full group-hover:scale-100 transition-transform duration-300 -z-0"></span>
+          </a>
         </div>
       </div>
     </nav>
