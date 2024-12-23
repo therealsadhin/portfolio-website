@@ -7,8 +7,8 @@ const Index = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
       <div className="absolute inset-0">
-        <div className="h-[30%] bg-primary"></div>
-        <div className="h-[70%] bg-secondary dark:bg-white"></div>
+        <div className="h-[40%] bg-primary"></div>
+        <div className="h-[60%] bg-secondary dark:bg-[#f3f3f3]"></div>
       </div>
       
       <div className="relative">
