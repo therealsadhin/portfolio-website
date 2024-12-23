@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full top-0 z-50 px-6 py-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold text-white">unbearable</div>
+        <div className="text-2xl font-bold text-white">Mehedi-Web-Dev</div>
         <button
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"

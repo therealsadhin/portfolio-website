@@ -39,7 +39,7 @@ const FloatingImage = () => {
       className="w-[500px] h-[500px] rounded-full overflow-hidden border-4 border-white/10"
     >
       <img
-        src="/lovable-uploads/63a9338a-2a0a-4dc1-9d5e-9c98c8c90516.png"
+        src="https://scontent.fspd3-1.fna.fbcdn.net/v/t39.30808-1/464230662_552084477574816_1813731539948852348_n.jpg?stp=c0.0.638.638a_dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=1d2534&_nc_ohc=R1D0RwQbPUUQ7kNvgG9_m6h&_nc_zt=24&_nc_ht=scontent.fspd3-1.fna&_nc_gid=Aqt_UONuE8swxPl7XVorbD6&oh=00_AYD2McLobzxlhJKplIaq7ww7P5Eqhd2SLLDu4nNY3hmL2Q&oe=676F1BEE"
         alt="Profile"
         className="w-full h-full object-cover"
       />

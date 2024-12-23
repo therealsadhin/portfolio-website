@@ -5,7 +5,7 @@ import { ArrowRight, Waves } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-primary overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-r from-black to-primary overflow-hidden">
       <Navbar />
       
       <main className="pt-32 px-6">
@@ -13,7 +13,7 @@ const Index = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold text-white flex items-center gap-2">
-                Hi, I'm Mika <Waves className="w-8 h-8 animate-bounce" />
+                Hi, I'm Mehedi <Waves className="w-8 h-8 animate-bounce" />
               </h1>
               <div className="flex items-center gap-2 text-2xl md:text-4xl text-white/90">
                 Designer <ArrowRight className="w-6 h-6" /> Developer
