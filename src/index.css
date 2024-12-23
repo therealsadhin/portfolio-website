@@ -99,3 +99,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .hamburger-menu span {
+    transform-origin: center;
+  }
+
+  .hamburger-menu.open span:first-child {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .hamburger-menu.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.open span:last-child {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+}
