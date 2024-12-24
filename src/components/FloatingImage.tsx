@@ -1,49 +1,27 @@
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import React from "react";
+import { motion } from "framer-motion";
 
 const FloatingImage = () => {
-  const imageRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!imageRef.current) return;
-
-    gsap.to(imageRef.current, {
-      y: 50,
-      duration: 2,
-      ease: "power1.inOut",
-      yoyo: true,
-      repeat: -1,
-    });
-
-    ScrollTrigger.create({
-      trigger: imageRef.current,
-      start: "top center",
-      end: "bottom top",
-      onUpdate: (self) => {
-        if (imageRef.current) {
-          gsap.to(imageRef.current, {
-            rotation: self.progress * 10,
-            duration: 1,
-          });
-        }
-      },
-    });
-  }, []);
-
   return (
-    <div
-      ref={imageRef}
-      className="w-[500px] h-[500px] rounded-full overflow-hidden border-4 border-white/10"
+    <motion.div
+      animate={{
+        y: [0, -20, 0],
+      }}
+      transition={{
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+      className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full p-2 bg-gradient-to-r from-primary/20 to-primary/40"
     >
-      <img
-        src="https://cdn.pixabay.com/photo/2021/06/15/16/11/man-6339003_1280.jpg"
-        alt="Profile"
-        className="w-full h-full object-cover"
-      />
-    </div>
+      <div className="w-full h-full rounded-full overflow-hidden border-4 border-black">
+        <img
+          src="/Floating_image.jpg"
+          alt="Floating Image"
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </motion.div>
   );
 };
 

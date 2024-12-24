@@ -1,28 +1,14 @@
 import React, { useState } from "react";
-import { Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
 
 const Navbar = () => {
-  const { theme, setTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <nav className="fixed w-full top-0 z-50 px-6 py-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold text-white">Mehedi-Web-Dev</div>
+        <a href="#" className="text-2xl font-bold text-white">sadhin-web</a>
         
         <div className="flex items-center gap-6">
-          <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-          >
-            {theme === "dark" ? (
-              <Sun className="h-5 w-5 text-white" />
-            ) : (
-              <Moon className="h-5 w-5 text-white" />
-            )}
-          </button>
-
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className={`relative w-8 h-8 flex items-center justify-center ${
@@ -49,28 +35,25 @@ const Navbar = () => {
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="h-full flex flex-col items-center justify-center gap-8">
-          <a 
-            href="#about" 
-            className="text-3xl text-white relative group"
-          >
-            <span className="relative z-10">About</span>
-            <span className="absolute inset-0 bg-primary scale-0 rounded-full group-hover:scale-100 transition-transform duration-300 -z-0"></span>
-          </a>
-          <a 
-            href="#hire" 
-            className="text-3xl text-white relative group"
-          >
-            <span className="relative z-10">Hire me</span>
-            <span className="absolute inset-0 bg-primary scale-0 rounded-full group-hover:scale-100 transition-transform duration-300 -z-0"></span>
-          </a>
-          <a 
-            href="#projects" 
-            className="text-3xl text-white relative group"
-          >
-            <span className="relative z-10">Projects</span>
-            <span className="absolute inset-0 bg-primary scale-0 rounded-full group-hover:scale-100 transition-transform duration-300 -z-0"></span>
-          </a>
+        <div className="h-full flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center gap-12 group/menu">
+            <a 
+              href="#hire" 
+              onClick={() => setIsMenuOpen(false)}
+              className="text-3xl text-white relative group/item transition-all duration-500 ease-out group-hover/menu:translate-y-0"
+            >
+              <span className="relative z-10 transition-transform duration-500 group-hover/item:scale-110">Hire me</span>
+              <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] h-[150px] bg-primary scale-0 rounded-full group-hover/item:scale-100 transition-all duration-500 ease-out -z-0"></span>
+            </a>
+            <a 
+              href="#projects" 
+              onClick={() => setIsMenuOpen(false)}
+              className="text-3xl text-white relative group/item transition-all duration-500 ease-out group-hover/menu:hover:translate-y-0 group-hover/menu:translate-y-16"
+            >
+              <span className="relative z-10 transition-transform duration-500 group-hover/item:scale-110">Projects</span>
+              <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] h-[150px] bg-primary scale-0 rounded-full group-hover/item:scale-100 transition-all duration-500 ease-out -z-0"></span>
+            </a>
+          </div>
         </div>
       </div>
     </nav>
