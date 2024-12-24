@@ -24,23 +24,23 @@ const ProjectCard = ({ title, description, link, color, textColor = "white" }: P
     <motion.div
       ref={ref}
       style={{ opacity, y }}
-      className="flex items-center space-x-8 relative hover:scale-105 transition-transform duration-300"
+      className="flex items-center space-x-4 md:space-x-8 relative hover:scale-105 transition-transform duration-300 w-full px-4 md:px-0"
     >
       <div 
-        className="p-12 md:p-16 rounded-3xl transition-transform duration-500"
+        className="p-6 md:p-12 lg:p-16 rounded-3xl transition-transform duration-500 w-full"
         style={{ backgroundColor: color }}
       >
-        <div className="max-w-4xl space-y-8">
+        <div className="max-w-4xl space-y-4 md:space-y-8">
           <div className="flex items-center justify-between">
             <h3 
-              className="text-5xl md:text-7xl font-bold leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight"
               style={{ color: textColor }}
             >
               {title}
             </h3>
           </div>
           <p 
-            className="text-xl md:text-2xl leading-relaxed"
+            className="text-lg sm:text-xl md:text-2xl leading-relaxed"
             style={{ color: textColor }} 
           >
             {description}
@@ -79,9 +79,9 @@ const Projects = () => {
   ];
 
   return (
-    <section ref={containerRef} className="min-h-screen bg-[#eaffca] relative overflow-hidden py-32 flex items-center" id="projects">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="space-y-12">
+    <section ref={containerRef} className="min-h-screen bg-[#eaffca] relative overflow-hidden py-16 md:py-32 flex items-center" id="projects">
+      <div className="max-w-7xl mx-auto w-full">
+        <div className="space-y-6 md:space-y-12">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
